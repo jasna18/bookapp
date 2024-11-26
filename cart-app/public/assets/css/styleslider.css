@@ -3,7 +3,7 @@
 } */
 .mySlides{
     display: none;
-    height:200px; 
+    height:240px; 
 
 }
 /* img {
@@ -13,7 +13,7 @@
 /* Slideshow container */
 .slideshow-container {
   max-width: 1050px;
-  height: 240px;
+  height: 280px;
   /* position: relative; */
   margin:auto;
 

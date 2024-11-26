@@ -1,4 +1,4 @@
-@extends('master')
+<!-- @extends('master')
        @section('index')
 
 <main class="container mt-5">
@@ -71,4 +71,4 @@
 @endsection
 
 </body>
-</html>
+</html> -->

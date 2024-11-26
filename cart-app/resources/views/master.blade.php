@@ -22,6 +22,8 @@
 @include('navlinks')
 @include('header')
 @include('slider')
+@include('body')
+
 <main>
      @yield('master')
  </main>
