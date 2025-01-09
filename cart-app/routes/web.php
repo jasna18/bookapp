@@ -18,7 +18,7 @@ use App\Http\Controllers\Frontend;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('/all-new_release', function () {
     return view('all_new_releases');
