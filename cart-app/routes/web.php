@@ -17,13 +17,16 @@ use App\Http\Controllers\Frontend;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
-Route::get('/', [Frontend::class, 'index'])->name('home');
-Route::get('/about', [Frontend::class, 'about'])->name('about');
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/all-new_release', function () {
+    return view('all_new_releases');
+})->name('all_new_release');
+// Route::get('/', [Frontend::class, 'index'])->name('home');
+// Route::get('/about', [Frontend::class, 'about'])->name('about');
 
-Route::get('/categoryForm', [CategoryController::class, 'create'])->name('categoryCreate');
+// Route::get('/categoryForm', [CategoryController::class, 'create'])->name('categoryCreate');
 
 // Route::post('/categoryStore', [CategoryController::class, 'store'])->name('categoryStore');
 

@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
     <link rel="stylesheet" href="{{asset('assets/css/stylenew.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/styleslider.css')}}">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
     <title>
@@ -16,8 +22,7 @@
         /* Container Wrapper */
         .container {
             position: relative;
-            width:1106px;
-            /* width: 1115px; */
+            width: 67%;
             margin: 0 auto;
         }
 
@@ -30,6 +35,10 @@
         /* Swiper slide card */
         .swiper-slide {
             flex: 0 0 calc(20% - 15.88px); /* Default card width */
+            /* display: flex;
+            flex-direction: column; */
+            /* align-items: center;
+            justify-content: space-between; */
             padding-top: 3px;
             height: auto;
             background-color: #f9f9f9;
@@ -67,16 +76,16 @@
             font-size: 0.9rem;
             border-radius: 5px;
             cursor: pointer;
-            background-color:#770536;
+            background-color:navy;
             color: #f9f9f9;
         }
 
         /* Navigation buttons */
         .swiper-button-next,
         .swiper-button-prev {
-            position: absolute;
-            top: 70%;
-            transform: translateY(-50%);
+            /* position: absolute; */
+            top: 80%;
+            transform: translateY(-10%);
             width: 35px;
             height: 35px;
             background-color: #fff;
@@ -93,12 +102,12 @@
 
         .swiper-button-prev {
             left: 0;
-            margin-left: -8px;
+            margin-left: 374px;
         }
 
         .swiper-button-next {
             right: 0;
-            margin-right: -8px;;
+            margin-right: 374px;
         }
         /* Hide buttons dynamically */
         .swiper-button-disabled {
@@ -114,64 +123,79 @@
         .swiper-button-next::after {
             font-size: 15px;/*djust arrow size */
         }
-        
+        /* off 30% slide button  */
+        /* Navigation buttons */
+       /* Adjusted Swiper Navigation Buttons for 30% Off Section */
+.swiper-button-next-off,
+.swiper-button-prev-off {
+    top: 80%; /* Center vertically */
+    transform: translateY(-50%); /* Center alignment */
+    width: 40px; /* Adjust size if needed */
+    height: 40px; /* Adjust size if needed */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev-off {
+    left: 10px; /* Adjust distance from left */
+    margin-left: 0; /* Reset margin */
+}
+
+.swiper-button-next-off {
+    right: 10px; /* Adjust distance from right */
+    margin-right: 0; /* Reset margin */
+}
+
+        /* Hide buttons dynamically */
+        /* .swiper-button-disabled {
+                    display: none;
+                } */
+
+         /* Change arrow size for previous button */
+        .swiper-button-prev-off::after {
+            font-size: 15px; /* Adjust arrow size */
+        }
+
+        /* Change arrow size for next button */
+        .swiper-button-next-off::after {
+            font-size: 15px;/*djust arrow size */
+        }
         /* Responsive styles */
         @media screen and (max-width: 1200px) {
             .container {
                 width: calc(100% - 4px); /* Fill the screen with 2px margin on left and right */
-                margin: 0 auto;
+                margin: 0 2px;
             }
 
             .swiper-slide {
-                flex: 0 0 calc(33.33% - 15px); /* Adjust card size to fit 3 cards */
+                flex: 0 0 calc(33.33% - 8px); /* Adjust card size to fit 3 cards */
             }
 
             .swiper-button-next,
             .swiper-button-prev {
-                display: none; /* Hide navigation buttons */ 
+                display: none; /* Hide navigation buttons */
             }
         }
 
         @media screen and (max-width: 768px) {
             .swiper-slide {
-                flex: 0 0 calc(50% - 15px); /* Adjust card size to fit 2 cards */
-            }
-            .container{
-                width: calc(100% - 50px); /* Fill the screen with 2px margin on left and right */
-                margin: 0 auto;
+                flex: 0 0 calc(33.3% - 8px); /* Adjust card size to fit 2 cards */
             }
         }
 
         @media screen and (max-width: 576px) {
             .swiper-slide {
-                flex: 0 0 calc(50% - 15px); /* Single card per row with margin */
-            }
-            .container{
-                width: calc(100% - 45px); /* Fill the screen with 2px margin on left and right */
-                margin: 0 auto;
-            }
-            .new{
-                font-size: 17px;
-                /* font-weight:normal; */
+                flex: 0 0 calc(33.3% - 4px); /* Single card per row with margin */
             }
         }
-        @media screen and (max-width: 364px) {
-            .new {
-                font-size: 15px;
-            }
-        }
-
-        @media screen and (max-width: 240px) {
-            .swiper-slide {
-                flex: 0 0 calc(50% - 15px);
-                height:auto; /* Single card per row with margin */
-            }
-            .container{
-                width: calc(100% - 5px); /* Fill the screen with 2px margin on left and right */
-                margin: 0 auto;
-        
-        }
-    }
     </style>
     </head>
 <body>
@@ -299,286 +323,276 @@
         <span class="dot"></span> 
         <span class="dot"></span> 
       </div>
-      <div class="container mt-4">
-      <div class="row">
-    <div class="col-6 mb-4 text-left new">New Releases</div>
-    <div class="col-6  text-right mb-4 text"><button class="btn" id="view-all-btn" onclick="myFunction()">view all</button>
-    </div>
-  </div>
-      <div class="swiper-container swiper1">
-      <div class="swiper-wrapper">
+      <h3 class="new">New Releases</h3>
+      <div class="container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
                 <!-- Product cards -->
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-1.jpg') }}" class="card-img-top img-fluid" alt="Product 1">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 1">
                     <div class="card-body">
                         <h5 class="card-title">Product 1</h5>
                         <p class="card-text">Description for <br> Product 1.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-2.jpg') }}" class="card-img-top img-fluid" alt="Product 2">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 2">
                     <div class="card-body">
                         <h5 class="card-title">Product 2</h5>
                         <p class="card-text">Description for <br> Product 2.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-3.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 3</h5>
                         <p class="card-text">Description for <br> Product 3.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 4</h5>
                         <p class="card-text">Description for <br> Product 4.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-5.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 5</h5>
                         <p class="card-text">Description for <br> Product 5.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-6.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 6</h5>
                         <p class="card-text">Description for <br> Product 6.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 7</h5>
                         <p class="card-text">Description for <br> Product 7.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 8</h5>
                         <p class="card-text">Description for <br> Product 8.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 9</h5>
                         <p class="card-text">Description for <br> Product 9.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 10</h5>
                         <p class="card-text">Description for <br> Product 10.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 11</h5>
                         <p class="card-text">Description for <br> Product 11.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 12</h5>
                         <p class="card-text">Description for <br> Product 12.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 13</h5>
                         <p class="card-text">Description for <br> Product 13.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 14</h5>
                         <p class="card-text">Description for <br> Product 14.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 15</h5>
                         <p class="card-text">Description for <br> Product 15.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                <!-- swiper wrapper ends -->
             </div>
             <!-- Add more products as needed -->
             <!-- Navigation buttons -->
-            <div class="swiper-button-prev swiper1-prev"></div>
-            <div class="swiper-button-next swiper1-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
             <!-- swiper container ends -->
       </div>
       <!-- conatiner ends herr -->
     </div>
  <!-- 30%^OFF DIV STARTS  -->
- <div class="container mt-4">
- <div class="row">
-    <div class="col-6 mb-4 text-left new">30% off</div>
-    <div class="col-6  text-right mb-4"><button class="btn" id="view-all-btn" onclick="myFunction()">view all</button> </div>
-    </div>
- <div class="swiper-container swiper2">
- <div class="swiper-wrapper">
+ <h3 class="new">30% off</h3>
+ <div class="swiper-container">
+            <div class="swiper-wrapper">
                 <!-- Product cards -->
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-6.jpg') }}" class="card-img-top img-fluid" alt="Product 1">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 1">
                     <div class="card-body">
                         <h5 class="card-title">Product 1</h5>
                         <p class="card-text">Description for <br> Product 1.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-6.jpg') }}" class="card-img-top img-fluid" alt="Product 2">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 2">
                     <div class="card-body">
                         <h5 class="card-title">Product 2</h5>
                         <p class="card-text">Description for <br> Product 2.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-5.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 3</h5>
                         <p class="card-text">Description for <br> Product 3.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 4</h5>
                         <p class="card-text">Description for <br> Product 4.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-3.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 5</h5>
                         <p class="card-text">Description for <br> Product 5.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-2.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 6</h5>
                         <p class="card-text">Description for <br> Product 6.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-1.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 7</h5>
                         <p class="card-text">Description for <br> Product 7.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 8</h5>
                         <p class="card-text">Description for <br> Product 8.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 9</h5>
                         <p class="card-text">Description for <br> Product 9.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 10</h5>
                         <p class="card-text">Description for <br> Product 10.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 11</h5>
                         <p class="card-text">Description for <br> Product 11.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 12</h5>
                         <p class="card-text">Description for <br> Product 12.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 13</h5>
                         <p class="card-text">Description for <br> Product 13.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 14</h5>
                         <p class="card-text">Description for <br> Product 14.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <img src="https://via.placeholder.com/150" class="card-img-top img-fluid" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 15</h5>
                         <p class="card-text">Description for <br> Product 15.</p>
-                        <button class="btn btn-cart">Add to Cart</button>
+                        <button class="btn btn-primary btn-cart">Add to Cart</button>
                     </div>
                 </div>
                <!-- swiper wrapper ends -->
             </div>
             <!-- Add more products as needed -->
             <!-- Navigation buttons -->
-            <div class="swiper-button-prev swiper2-prev"></div>
-            <div class="swiper-button-next swiper2-next"></div>
+            <div class="swiper-button-prev-off"></div>
+            <div class="swiper-button-next-off"></div>
             <!-- swiper container ends -->
-            </div>
-             <!-- conatiner ends here  -->
-    </div>
+      </div>
       <!-- slider end -->
 </div> 
 
@@ -634,7 +648,7 @@ function showSlides() {
 
 <script>
 function myFunction(){  // Redirect to the new page where all cards are shown
-    window.location.href ="{{ route('all_new_release') }}";
+    window.location.href ="{{ route('all_new_releases') }}";
 };
     </script>
 
@@ -645,33 +659,20 @@ function myFunction(){  // Redirect to the new page where all cards are shown
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 <!-- <script type="text/javascript" src="{{asset('assets/js/slider.js')}}"></script>   -->
-     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-        // Initialize the first swiper
-        const swiper1 = new Swiper('.swiper1', {
-            slidesPerView: "auto",
-            slidesPerGroup: 5,
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: "auto", // Default for larger screens
+            slidesPerGroup: 5, // Scroll 5 slides at a time
             spaceBetween: 20,
-            navigation: {
-                nextEl: '.swiper1-next',
-                prevEl: '.swiper1-prev',
-            },
             loop: false,
             centeredSlides: false,
-        });
-
-        // Initialize the second swiper
-        const swiper2 = new Swiper('.swiper2', {
-            slidesPerView: "auto",
-            slidesPerGroup: 5,
-            spaceBetween: 20,
+       
             navigation: {
-                nextEl: '.swiper2-next',
-                prevEl: '.swiper2-prev',
-            },
-            loop: false,
-            centeredSlides: false,
-        });
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+    });
     </script>
 </body>
 </html>

@@ -22,10 +22,10 @@
 @include('navlinks')
 @include('header')
 @include('slider')
+<br>
 @include('body')
-
 <main>
-     @yield('master')
+     @yield('contents')
  </main>
 
     <!--bootsrtap js-->

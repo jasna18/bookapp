@@ -1,20 +1,21 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
+  /* font-weight: 200; */
 
 }
 
 .logom {
   font-weight: bold;
   font-size: 30px;
-  color: purple;
+  color: #970747;
 
 }
 .logow {
   font-weight: bold;
   font-size: 40px;
   margin-left: 420px;
-  color:purple;
+  color:#970747;
 }
 .top-row, .second-row {
   display: flex;
@@ -25,7 +26,9 @@ body {
 
 .top-row {
   /* background-color: lightgray;  */
-   background-color: rgb(231, 183, 183);
+   background-color:#970747;
+   color:white;
+
 
 }
 
@@ -149,4 +152,155 @@ body {
   color: #818181;
 }
 
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+  margin-bottom:20px;
+  box-sizing:border-box;
  
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  box-sizing:border-box;
+
+}
+/* Style the counter cards */
+/* .card {
+  padding: 16px;
+  text-align: center;
+  box-sizing:border-box; 
+} */
+.new{
+  font-style:italic;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #970747;
+
+}
+.btn-cart{
+  background-color: #970747;
+  color:white;
+}
+.txt-view{
+ text-align:center;
+ color: #970747;
+ text-decoration: underline;
+
+
+}
+/* Responsive columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.hidden-cards {
+  display: none;
+}
+
+#view-all {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Optionally add hover styles for better UI */
+#view-all:hover {
+  background-color: #770536;
+}
+
+.footer {
+  background-color:  #770536; /* Dark background color */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 20px 10px; /* Spacing around the footer content */
+  font-size: 14px;
+  margin-top: 1100px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  height:200px ;
+  margin: 0 auto; /* Center the content */
+}
+
+.footer-links {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 10px 0 0; /* Add some margin above the links */
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  gap: 15px; /* Space between links */
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #fff; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #ff9800; /* Optional hover color */
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    margin-top: 4200px;
+    font-size: 11px;
+
+  }
+  .footer-container {
+    max-width: 992px;
+    height:50px ;
+  }
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 10px;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.card {
+  flex: 0 0 auto;
+  padding: 16px;
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+.card img {
+  max-height: 150px;
+  object-fit: cover;
+}

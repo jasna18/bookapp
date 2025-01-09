@@ -1,0 +1,159 @@
+ /* Container Wrapper */
+ .container {
+    position: relative;
+    width:1106px;
+    /* width: 1115px; */
+    margin: 0 auto;
+}
+
+/* Swiper container */
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Swiper slide card */
+.swiper-slide {
+    flex: 0 0 calc(20% - 15.88px); /* Default card width */
+    padding-top: 3px;
+    height: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.card-img-top {
+    max-width: 80%;
+    height: 230PX;
+    border-radius: 5px;
+    padding-top:35px;
+}
+
+.card-body {
+    margin-top:20px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.btn-cart {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:#770536;
+    color: #f9f9f9;
+}
+
+/* Navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev {
+    left: 0;
+    margin-left: -8px;
+}
+
+.swiper-button-next {
+    right: 0;
+    margin-right: -8px;;
+}
+/* Hide buttons dynamically */
+.swiper-button-disabled {
+            display: none;
+        }
+
+ /* Change arrow size for previous button */
+.swiper-button-prev::after {
+    font-size: 15px; /* Adjust arrow size */
+}
+
+/* Change arrow size for next button */
+.swiper-button-next::after {
+    font-size: 15px;/*djust arrow size */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: calc(100% - 4px); /* Fill the screen with 2px margin on left and right */
+        margin: 0 auto;
+    }
+
+    .swiper-slide {
+        flex: 0 0 calc(33.33% - 15px); /* Adjust card size to fit 3 cards */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* Hide navigation buttons */ 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-slide {
+        flex: 0 0 calc(50% - 15px); /* Adjust card size to fit 2 cards */
+    }
+    .container{
+        width: calc(100% - 50px); /* Fill the screen with 2px margin on left and right */
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .swiper-slide {
+        flex: 0 0 calc(50% - 15px); /* Single card per row with margin */
+    }
+    .container{
+        width: calc(100% - 45px); /* Fill the screen with 2px margin on left and right */
+        margin: 0 auto;
+    }
+    .new{
+        font-size: 17px;
+        /* font-weight:normal; */
+    }
+}
+@media screen and (max-width: 364px) {
+    .new {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .swiper-slide {
+        flex: 0 0 calc(50% - 15px);
+        height:auto; /* Single card per row with margin */
+    }
+    .container{
+        width: calc(100% - 5px); /* Fill the screen with 2px margin on left and right */
+        margin: 0 auto;
+
+}
+}
