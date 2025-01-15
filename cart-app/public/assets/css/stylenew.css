@@ -230,37 +230,4 @@
     }
   }
   
-  .card-img-top {
-    max-width: 80%;
-    height: 230PX;
-    border-radius: 5px;
-    padding-top:30px;
-    /* padding-bottom: 10px; */
-    padding-left: 10px ;
-    padding-right:10px ;
-}
-
-.card-body {
-    margin-top:20px;
-}
-
-.card-title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.card-text {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.btn-cart {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color:#770536;
-    color: #f9f9f9;
-}
+ 

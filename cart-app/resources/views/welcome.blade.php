@@ -50,7 +50,7 @@
             height: 35px;
             background-color: #fff;
             border: 1px solid #ccc;
-            border-radius: 50%;
+            border-radius: 50% !important;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -75,17 +75,17 @@
         }
         /* Hide buttons dynamically */
         .swiper-button-disabled {
-                    display: none;
+                    display: none !important;
                 }
 
          /* Change arrow size for previous button */
         .swiper-button-prev::after {
-            font-size: 15px; /* Adjust arrow size */
+            font-size: 15px !important; /* Adjust arrow size */
         }
 
         /* Change arrow size for next button */
         .swiper-button-next::after {
-            font-size: 15px;/*djust arrow size */
+            font-size: 15px !important;/*djust arrow size */
         }
         
         /* Responsive styles */
@@ -144,7 +144,42 @@
                 margin: 0 auto;
         
         }
-    }
+    } .card-img-top {
+    max-width: 80%;
+    height: 230PX;
+    border-radius: 5px;
+    padding-top:30px;
+    /* padding-bottom: 10px; */
+    padding-left: 10px ;
+    padding-right:10px ;
+}
+
+.card-body {
+    margin-top:20px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.btn-cart {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:#770536;
+    color: #f9f9f9;
+}
+
+    
     </style>
     </head>
 <body>
