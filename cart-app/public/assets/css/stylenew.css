@@ -1,8 +1,5 @@
 /* General Styles */
-body {
-    
 
-  }
   
   .logom {
     font-weight: bold;
@@ -152,23 +149,22 @@ body {
     color: #970747;
     font-size: 25px;
     font-weight: bold;
-
-
   
   }
-
-  .hidden-cards {
-    display: none;
-  }
   
-  #view-all {
-    margin-top: 20px;
-    cursor: pointer;
+  #view-all-btn {
+    /* margin-top: 20px; */
+    /* cursor: pointer; */
+    border-color: #970747;
+    background-color:#fff;
+
   }
   
   /* Optionally add hover styles for better UI */
-  #view-all:hover {
-    background-color: #770536;
+  #view-all-btn:hover {
+    background-color:#790c3b;
+    color: #fff;
+    
   }
   
   .footer {
@@ -232,6 +228,39 @@ body {
       margin-left:auto;
       margin-right:auto;
     }
-    
   }
   
+  .card-img-top {
+    max-width: 80%;
+    height: 230PX;
+    border-radius: 5px;
+    padding-top:30px;
+    /* padding-bottom: 10px; */
+    padding-left: 10px ;
+    padding-right:10px ;
+}
+
+.card-body {
+    margin-top:20px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.btn-cart {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:#770536;
+    color: #f9f9f9;
+}

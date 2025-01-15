@@ -16,8 +16,8 @@
         /* Container Wrapper */
         .container {
             position: relative;
-            width:1106px;
-            /* width: 1115px; */
+            width:100%;
+            /* width: 1106px; */
             margin: 0 auto;
         }
 
@@ -29,7 +29,7 @@
 
         /* Swiper slide card */
         .swiper-slide {
-            flex: 0 0 calc(20% - 15.88px); /* Default card width */
+            flex: 0 0 calc(20% - 16.1px); /* Default card width */
             padding-top: 3px;
             height: auto;
             background-color: #f9f9f9;
@@ -39,37 +39,6 @@
             border-radius: 5px;
         }
 
-        .card-img-top {
-            max-width: 80%;
-            height: 230PX;
-            border-radius: 5px;
-            padding-top:35px;
-        }
-
-        .card-body {
-            margin-top:20px;
-        }
-
-        .card-title {
-            font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .card-text {
-            font-size: 0.9rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .btn-cart {
-            padding: 8px 12px;
-            font-size: 0.9rem;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color:#770536;
-            color: #f9f9f9;
-        }
 
         /* Navigation buttons */
         .swiper-button-next,
@@ -94,6 +63,10 @@
         .swiper-button-prev {
             left: 0;
             margin-left: -8px;
+        }
+        .swiper-button-next:hover
+        .swiper-button-prev:hover{
+            background-color:#970747;;
         }
 
         .swiper-button-next {
