@@ -46,17 +46,19 @@
   .text {font-size: 11px}
 }
  /* MOBILE SCREEN */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1130px) {
   .slideshow-container {
   
     margin-left:20px;
     margin-right: 20px;
   }
 }
-@media screen and (max-width: 1122px) {
+/* @media screen and (max-width: 1122px) {
   .slideshow-container {
   
     margin-left:20px;
     margin-right: 20px;
   }
-}
+} */
+
+      

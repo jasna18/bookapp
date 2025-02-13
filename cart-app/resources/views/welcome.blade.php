@@ -13,138 +13,78 @@
         @yield('title', 'H&H Books      - Home')
     </title>
     <style>
-        /* Container Wrapper */
-        .container {
-            position: relative;
-            width:100%;
-            /* width: 1106px; */
-            margin: 0 auto;
-        }
+ .container {
+    position: relative;
+    width:100%;
+    /* width: 1106px; */
+    margin: 0 auto;
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
+  }
+  /* Swiper container */
+  .swiper-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  /* Swiper slide card */
+  .swiper-slide {
+    flex: 0 0 calc(20% - 16.1px); /* Default card width */
+    padding-top: 3px;
+    /* height: auto; */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+ /* Navigation buttons */
+  .swiper-button-next,
+  .swiper-button-prev {
+     /* position: absolute; */
+     top: 70% !important;
+     transform: translateY(-50%);
+     width: 35px;
+     height: 35px;
+     background-color: #fff;
+     border: 1px solid #ccc;
+     border-radius: 50% !important;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #333 !important;
+     cursor: pointer;
+     z-index: 10;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   }
+  .swiper-button-prev {
+   left: 0;
+   margin-left: -5px !important;
+  }
+  .swiper-button-next {
+   right: 0;
+   margin-right: -5px;;
+  }  
+  .swiper-button-next:hover
+  .swiper-button-prev:hover{
+    background-color:#970747;
+  }
+/* Hide buttons dynamically */
+  .swiper-button-disabled {
+    display: none !important;
+ }
+ :root {
+  --swiper-navigation-size: 88px;
+}
+ .swiper-button-prev{
+  font-size: 10px !important; /* Adjust arrow size */
+}
 
-        /* Swiper container */
-        .swiper-container {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        /* Swiper slide card */
-        .swiper-slide {
-            flex: 0 0 calc(20% - 16.1px); /* Default card width */
-            padding-top: 3px;
-            height: auto;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-
-        /* Navigation buttons */
-        .swiper-button-next,
-        .swiper-button-prev {
-            position: absolute;
-            top: 70%;
-            transform: translateY(-50%);
-            width: 35px;
-            height: 35px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 50% !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            cursor: pointer;
-            z-index: 10;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .swiper-button-prev {
-            left: 0;
-            margin-left: -8px;
-        }
-        .swiper-button-next:hover
-        .swiper-button-prev:hover{
-            background-color:#970747;;
-        }
-
-        .swiper-button-next {
-            right: 0;
-            margin-right: -8px;;
-        }
-        /* Hide buttons dynamically */
-        .swiper-button-disabled {
-                    display: none !important;
-                }
-
-         /* Change arrow size for previous button */
-        .swiper-button-prev::after {
-            font-size: 15px !important; /* Adjust arrow size */
-        }
-
-        /* Change arrow size for next button */
-        .swiper-button-next::after {
-            font-size: 15px !important;/*djust arrow size */
-        }
-        
-        /* Responsive styles */
-        @media screen and (max-width: 1200px) {
-            .container {
-                width: calc(100% - 4px); /* Fill the screen with 2px margin on left and right */
-                margin: 0 auto;
-            }
-
-            .swiper-slide {
-                flex: 0 0 calc(33.33% - 15px); /* Adjust card size to fit 3 cards */
-            }
-
-            .swiper-button-next,
-            .swiper-button-prev {
-                display: none; /* Hide navigation buttons */ 
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .swiper-slide {
-                flex: 0 0 calc(50% - 15px); /* Adjust card size to fit 2 cards */
-            }
-            .container{
-                width: calc(100% - 50px); /* Fill the screen with 2px margin on left and right */
-                margin: 0 auto;
-            }
-        }
-
-        @media screen and (max-width: 576px) {
-            .swiper-slide {
-                flex: 0 0 calc(50% - 15px); /* Single card per row with margin */
-            }
-            .container{
-                width: calc(100% - 45px); /* Fill the screen with 2px margin on left and right */
-                margin: 0 auto;
-            }
-            .new{
-                font-size: 17px;
-                /* font-weight:normal; */
-            }
-        }
-        @media screen and (max-width: 364px) {
-            .new {
-                font-size: 15px;
-            }
-        }
-
-        @media screen and (max-width: 240px) {
-            .swiper-slide {
-                flex: 0 0 calc(50% - 15px);
-                height:auto; /* Single card per row with margin */
-            }
-            .container{
-                width: calc(100% - 5px); /* Fill the screen with 2px margin on left and right */
-                margin: 0 auto;
-        
-        }
-    } .card-img-top {
+/* Change arrow size for next button */
+.swiper-button-next {
+  font-size: 15px !important;/*djust arrow size */
+}
+  .card-img-top {
     max-width: 80%;
     height: 230PX;
     border-radius: 5px;
@@ -152,31 +92,136 @@
     /* padding-bottom: 10px; */
     padding-left: 10px ;
     padding-right:10px ;
+    }
+    .card-body {
+      margin-top:20px;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: bold;
+      /* margin-bottom: 5px; */
+      }
+    .card-text {
+      font-size: 0.9rem;
+      color: #555;
+     /* margin-bottom: 10px; */
+      }
+    .btn-cart {
+     /* padding: 8px 12px; */
+      font-size: 0.9rem;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color:#770536;
+      color: #f9f9f9;
+      }
+      .swiper-slide {
+        min-width: unset !important;
+        max-width: unset !important;
+    }
+    :root {
+      --swiper-navigation-size: 20px;
+  }
+        /* Container Wrapper */
+        /* Responsive styles */
+    @media screen and (max-width: 1199px) { 
+    .container {
+        width: calc(100% - 4px); /* Adjusted for full width with minimal margin */
+        margin: 0 20;
+        padding-bottom: 0 !important;
+
+    }
+    .swiper-slide {
+        flex: 0 0 calc(25% - 15px); /* 4 cards per row */
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* Hide navigation buttons */
+    }
+ 
 }
 
-.card-body {
-    margin-top:20px;
+@media screen and (max-width: 991px) {
+    .container {
+        width: calc(90% - 4px); /* Adjusted for better centering */
+        padding-bottom: 0 !important;
+        margin: 0 20;
+
+
+    }
+    .swiper-slide {
+        flex: 0 0 calc(33.3% - 15px); /* 3 cards per row */
+    }
+    .swiper-wrapper {
+        align-items: flex-start !important; /* Prevents extra space */
+    }
 }
 
-.card-title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 5px;
+@media screen and (max-width: 768px) {
+    .container {
+        width: calc(75% - 50px);
+        padding-bottom: 0 !important;
+        margin: 0 40;
+    }
+    .swiper-slide {
+        flex: 0 0 calc(50% - 10px); /* 2 cards per row */
+    }
+    .swiper-wrapper {
+        align-items: flex-start; /* Prevents extra space */
+    }
 }
 
-.card-text {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 10px;
+@media screen and (max-width: 576px) {
+    .container {
+        width: calc(95% - 10px); /* More width for small screens */
+        padding-bottom: 0 !important;
+        margin: 0 60;
+    }
+    .swiper-slide {
+        flex: 0 0 calc(50% - 10px); /* 2 cards per row */
+    }
+    .new {
+        font-size: 17px;
+    }
+    footer {
+        padding: 10px 5px; /* Minimal padding for very small screens */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack footer links vertically */
+        gap: 10px; /* Add spacing between stacked links */
+    }
+
+    .footer-links a {
+        font-size: 12px; /* Smaller font for footer links */
+    }
 }
 
-.btn-cart {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color:#770536;
-    color: #f9f9f9;
+@media screen and (max-width: 364px) {
+    .new {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .container {
+        width: calc(100% - 5px);
+    }
+    .swiper-slide {
+        flex: 0 0 100%; /* Single card per row */
+        height: auto;
+    }
+    footer {
+        padding: 10px 5px; /* Minimal padding for very small screens */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack footer links vertically */
+        gap: 10px; /* Add spacing between stacked links */
+    }
+
+    .footer-links a {
+        font-size: 12px; /* Smaller font for footer links */
+    }
 }
 
     
@@ -307,12 +352,12 @@
         <span class="dot"></span> 
         <span class="dot"></span> 
       </div>
-      <div class="container mt-4">
-      <div class="row">
-    <div class="col-6 mb-4 text-left new">New Releases</div>
-    <div class="col-6  text-right mb-4 text"><button class="btn" id="view-all-btn" onclick="myFunction()">view all</button>
-    </div>
-  </div>
+    <div class="container mt-4">
+            <div class="row">
+              <div class="col-6 mb-4 text-left new">New Releases</div>
+                 <div class="col-6  text-right mb-4 text"><button class="btn" id="view-all-btn" onclick="myFunction()">view all</button>
+                </div>
+            </div>
       <div class="swiper-container swiper1">
       <div class="swiper-wrapper">
                 <!-- Product cards -->
@@ -585,7 +630,147 @@
             <div class="swiper-button-next swiper2-next"></div>
             <!-- swiper container ends -->
             </div>
-             <!-- conatiner ends here  -->
+             <!-- conatiner ends here  -->     
+    </div>
+    <!-- 30%^OFF DIV STARTS  -->
+ <div class="container mt-4">
+ <div class="row">
+    <div class="col-6 mb-4 text-left new">30% off</div>
+    <div class="col-6  text-right mb-4"><button class="btn" id="view-all-btn" onclick="myFunction()">view all</button> </div>
+    </div>
+ <div class="swiper-container swiper3">
+ <div class="swiper-wrapper">
+                <!-- Product cards -->
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-6.jpg') }}" class="card-img-top img-fluid" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">Description for <br> Product 1.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-6.jpg') }}" class="card-img-top img-fluid" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">Description for <br> Product 2.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-5.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 3</h5>
+                        <p class="card-text">Description for <br> Product 3.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 4</h5>
+                        <p class="card-text">Description for <br> Product 4.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-3.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 5</h5>
+                        <p class="card-text">Description for <br> Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-2.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 6</h5>
+                        <p class="card-text">Description for <br> Product 6.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-1.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 7</h5>
+                        <p class="card-text">Description for <br> Product 7.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for <br> Product 8.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 9</h5>
+                        <p class="card-text">Description for <br> Product 9.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 10</h5>
+                        <p class="card-text">Description for <br> Product 10.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 11</h5>
+                        <p class="card-text">Description for <br> Product 11.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 12</h5>
+                        <p class="card-text">Description for <br> Product 12.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 13</h5>
+                        <p class="card-text">Description for <br> Product 13.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 14</h5>
+                        <p class="card-text">Description for <br> Product 14.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top img-fluid" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 15</h5>
+                        <p class="card-text">Description for <br> Product 15.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+               <!-- swiper wrapper ends -->
+            </div>
+            <!-- Add more products as needed -->
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev swiper3-prev"></div>
+            <div class="swiper-button-next swiper3-next"></div>
+            <!-- swiper container ends -->
+            </div>
+             <!-- conatiner ends here  -->     
     </div>
       <!-- slider end -->
 </div> 
@@ -680,6 +865,19 @@ function myFunction(){  // Redirect to the new page where all cards are shown
             loop: false,
             centeredSlides: false,
         });
+         // Initialize the second swiper
+         const swiper3 = new Swiper('.swiper3', {
+            slidesPerView: "auto",
+            slidesPerGroup: 5,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper3-next',
+                prevEl: '.swiper3-prev',
+            },
+            loop: false,
+            centeredSlides: false,
+        });
+        
     </script>
 </body>
 </html>
