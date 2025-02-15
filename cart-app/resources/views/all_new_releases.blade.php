@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-
     <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/stylenew.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/stylesallreleases.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/styleslider.css')}}">
 
-
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
     <title>
@@ -124,13 +121,30 @@
         </nav> 
      </header>   
      <!-- slider -->
-<div class="slideshow-container">
-<div class="content mt-4">
+<div class="slideshow-container border slider-spacing">
+<div class="mySlides fade">
+        <img src= "{{asset('images/banner-1.jpg')}}"  style="width:100%" height="100%" alt="1">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="{{asset('images/banner-2.jpg') }}" style="width:100%" height="100%"  alt="2">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="{{asset('images/banner-4.jpg') }}" style="width:100%" height="100%"  alt="3">
+      </div>
+
+      <div style="text-align:center;padding-top:10px;">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+   <div class="content mt-4">
     <h3 class="new">New Releases</h3>
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 1">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
                     <div class="card-body">
                         <h5 class="card-title">Product 1</h5>
                         <p class="card-text">Description for Product 1.</p>
@@ -140,8 +154,37 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 1">
-
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">Description for Product 1.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">Description for Product 1.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">Description for Product 1.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
                     <div class="card-body">
                         <h5 class="card-title">Product 2</h5>
                         <p class="card-text">Description for Product 2.</p>
@@ -151,7 +194,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 3">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 3">
                     <div class="card-body">
                         <h5 class="card-title">Product 3</h5>
                         <p class="card-text">Description for Product 3.</p>
@@ -161,7 +204,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 4">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 4">
                     <div class="card-body">
                         <h5 class="card-title">Product 4</h5>
                         <p class="card-text">Description for Product 4.</p>
@@ -171,7 +214,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 5">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 5">
                     <div class="card-body">
                         <h5 class="card-title">Product 5</h5>
                         <p class="card-text">Description for Product 5.</p>
@@ -181,7 +224,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 6">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 6">
                     <div class="card-body">
                         <h5 class="card-title">Product 6</h5>
                         <p class="card-text">Description for Product 5.</p>
@@ -191,7 +234,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 7">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 7">
                     <div class="card-body">
                         <h5 class="card-title">Product 7</h5>
                         <p class="card-text">Description for Product 5.</p>
@@ -201,7 +244,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 8">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 8">
                     <div class="card-body">
                         <h5 class="card-title">Product 8</h5>
                         <p class="card-text">Description for Product 5.</p>
@@ -211,7 +254,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 8">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 8">
                     <div class="card-body">
                         <h5 class="card-title">Product 8</h5>
                         <p class="card-text">Description for Product 5.</p>
@@ -221,7 +264,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 9">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
                     <div class="card-body">
                         <h5 class="card-title">Product 8</h5>
                         <p class="card-text">Description for Product 5.</p>
@@ -231,7 +274,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 8">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 8">
                     <div class="card-body">
                         <h5 class="card-title">Product 8</h5>
                         <p class="card-text">Description for Product 5.</p>
@@ -241,7 +284,77 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top" alt="Product 9">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
                     <div class="card-body">
                         <h5 class="card-title">Product 8</h5>
                         <p class="card-text">Description for Product 5.</p>
@@ -256,10 +369,7 @@
     <!-- slider contaimer end -->
 </div>    
 <!-- slider end -->
-<!-- body -->
-
- <!-- end -->
- <footer class="footer">
+ <footer class="footer-allnew">
     <div class="footer-container">
         <p>&copy; 2024 My Website. All Rights Reserved.</p>
         <ul class="footer-links">
@@ -269,9 +379,9 @@
             <li><a href="/terms">Terms of Service</a></li>
         </ul>
     </div>
-</footer>
-    </body>
-    </main>
+  </footer>
+</body>
+ </main>
 <script>
 function openNav() 
 {
@@ -282,6 +392,28 @@ function closeNav() {
   document.getElementById("myNav").style.width = "0%"
 }
 </script>
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" actives", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " actives";
+  setTimeout(showSlides, 1580); // Change image every 2 seconds
+}
+    </script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 

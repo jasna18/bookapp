@@ -1,22 +1,6 @@
 /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  /* font-weight: 200; */
 
-}
 
-.logom {
-  font-weight: bold;
-  font-size: 30px;
-  color: #970747;
-
-}
-.logow {
-  font-weight: bold;
-  font-size: 40px;
-  margin-left: 420px;
-  color:#970747;
-}
 .top-row, .second-row {
   display: flex;
   justify-content: center;
@@ -24,86 +8,7 @@ body {
   height: 40px;
 }
 
-.top-row {
-  /* background-color: lightgray;  */
-   background-color:#970747;
-   color:white;
 
-
-}
-
-.second-row {
-  background-color: rgb(231, 183, 183);
-}
-
-.third-row {
-  /* background-color: lightgray; */
-  display: flex;
-  justify-content: center;
-  height: 100px;
-  padding-top: 35px;
-}
-
-.navbar-link-spacing {
-  margin-right: 18px;
-}
-
-/* Hide third row on mobile */
-@media screen and (max-width: 767px) {
-  .third-row {
-      display: none;
-
-  }
-
-  .logow .d-lg-none {
-      display: block;  /* Show mobile logo */
-
-  }
-
-  /* Navbar adjustments for mobile */
-  .navbar-nav {
-      display: flex;
-      flex-direction: column; /* Stack navbar items on mobile */
-      text-align: center;
-  }
-
-  .navbar-nav .nav-item {
-      margin-bottom: 15px; /* Add spacing between links */
-  }
-
-  .navbar-toggler {
-      margin-left: 10px;
-  }
-  .top-row {
-     font-size:11px;
-     text-align: center;
-     overflow:hidden;
-
-  }
-  .second-row {
-    font-size:11px;
-    text-align: center;
-     overflow:hidden;
-
- }
-}
-
-/* Navbar styling for larger screens */
-@media screen and (min-width: 768px) {
-  .navbar-nav {
-      display: flex;
-      justify-content: center;
-
-  }
-
-  .navbar-nav .nav-item {
-      margin-right: 25px; /* Adjust spacing between navbar items */
-  }
-
-  .logom .d-lg-none {
-      display: none;  /* Hide mobile logo on larger screens */
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   /* Show the navbar toggler on mid-sized screens */
   .navbar-toggler {
@@ -111,45 +16,12 @@ body {
   }
        /* Ensure it is visible on medium screens */
 }
-/* Overlay styles */
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgba(250, 244, 244, 0.9);
-  overflow-x: hidden;
-  transition: width 0.5s;
-}
 
 .overlay-content {
   position: relative;
   top: 25%;
   width: 100%;
   text-align: center;
-}
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.overlay a:hover {
-  color: #f1f1f1;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  color: #818181;
 }
 
 /* Float four columns side by side */
@@ -234,7 +106,7 @@ body {
   text-align: center;
   padding: 20px 10px; /* Spacing around the footer content */
   font-size: 14px;
-  margin-top: 1100px;
+  margin-top: 1550px;
 }
 
 .footer-container {
@@ -279,23 +151,9 @@ body {
   }
 }
 
-.scroll-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 10px;
-  padding: 10px;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
-}
-
-.scroll-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
-}
-
 .card {
   flex: 0 0 auto;
-  padding: 16px;
+  padding: 6px;
   text-align: center;
   box-sizing: border-box; 
 }

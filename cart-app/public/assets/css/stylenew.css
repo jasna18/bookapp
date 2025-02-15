@@ -1,216 +1,241 @@
 /* General Styles */
 
-body,main {
+/* body,
+main {
 
-  min-height: 100vh;
+  min-height: 150vh;
+} */
+
+.logom {
+  font-weight: bold;
+  font-size: 30px;
+  color: #970747;
+
 }
-  .logom {
-    font-weight: bold;
-    font-size: 30px;
-    color: #970747;
-  
-  }
-  .logow {
-    font-weight: bold;
-    font-size: 40px;
-    margin-left: 420px;
-    color:#970747;
-  }
-  .top-row, .second-row {
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    height: 40px;
-  }
-  
-  .top-row {
-    /* background-color: lightgray;  */
-     background-color:#970747;
-     color:white;
-  }
-  
-  .second-row {
-    background-color: rgb(231, 183, 183);
-  }
-  
+
+.logow {
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 420px;
+  color: #970747;
+}
+
+.top-row,
+.second-row {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  height: 40px;
+}
+
+.top-row {
+  /* background-color: lightgray;  */
+  background-color: #970747;
+  color: white;
+}
+
+.second-row {
+  background-color: rgb(231, 183, 183);
+}
+
+.third-row {
+  /* background-color: lightgray; */
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  padding-top: 35px;
+}
+
+.navbar-link-spacing {
+  margin-right: 18px;
+}
+
+/* Hide third row on mobile */
+@media screen and (max-width: 767px) {
   .third-row {
-    /* background-color: lightgray; */
+    display: none;
+
+  }
+
+  .logow .d-lg-none {
+    display: block;
+    /* Show mobile logo */
+
+  }
+
+  /* Navbar adjustments for mobile */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    /* Stack navbar items on mobile */
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 15px;
+    /* Add spacing between links */
+  }
+
+  .navbar-toggler {
+    margin-left: 10px;
+  }
+
+  .top-row {
+    font-size: 11px;
+    text-align: center;
+    overflow: hidden;
+
+  }
+
+  .second-row {
+    font-size: 11px;
+    text-align: center;
+    overflow: hidden;
+
+  }
+}
+
+/* Navbar styling for larger screens */
+@media screen and (min-width: 768px) {
+  .navbar-nav {
     display: flex;
     justify-content: center;
-    height: 100px;
-    padding-top: 35px;
-  }
-  
-  .navbar-link-spacing {
-    margin-right: 18px;
-  }
-  
-  /* Hide third row on mobile */
-  @media screen and (max-width: 767px) {
-    .third-row {
-        display: none;
-  
-    }
-  
-    .logow .d-lg-none {
-        display: block;  /* Show mobile logo */
-  
-    }
-  
-    /* Navbar adjustments for mobile */
-    .navbar-nav {
-        display: flex;
-        flex-direction: column; /* Stack navbar items on mobile */
-        text-align: center;
-    }
-  
-    .navbar-nav .nav-item {
-        margin-bottom: 15px; /* Add spacing between links */
-    }
-  
-    .navbar-toggler {
-        margin-left: 10px;
-    }
-    .top-row {
-       font-size:11px;
-       text-align: center;
-       overflow:hidden;
-  
-    }
-    .second-row {
-      font-size:11px;
-      text-align: center;
-       overflow:hidden;
-  
-   }
-  }
-  
-  /* Navbar styling for larger screens */
-  @media screen and (min-width: 768px) {
-    .navbar-nav {
-        display: flex;
-        justify-content: center;
-  
-    }
-  
-    .navbar-nav .nav-item {
-        margin-right: 25px; /* Adjust spacing between navbar items */
-    }
-  
-    .logom .d-lg-none {
-        display: none;  /* Hide mobile logo on larger screens */
-    }
+
   }
 
-  /* Overlay styles */
-  .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(250, 244, 244, 0.9);
-    overflow-x: hidden;
-    transition: width 0.5s;
+  .navbar-nav .nav-item {
+    margin-right: 25px;
+    /* Adjust spacing between navbar items */
   }
-  
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
+
+  .logom .d-lg-none {
+    display: none;
+    /* Hide mobile logo on larger screens */
   }
-  
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .overlay a:hover {
-    color: #f1f1f1;
-  }
-  
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    color: #818181;
-  }
-  
-  
-  .new{
-    font-style:italic;
-    /* margin-top: 25px;
+}
+
+/* Overlay styles */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(250, 244, 244, 0.9);
+  overflow-x: hidden;
+  transition: width 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #818181;
+}
+
+
+.new {
+  font-style: italic;
+  /* margin-top: 25px;
     margin-left: 20px; */
-    /* margin-bottom: 25px; */
-    color: #970747;
-    font-size: 25px;
-    font-weight: bold;
-  
-  }
-  
-  #view-all-btn {
-    /* margin-top: 20px; */
-    /* cursor: pointer; */
-    border-color: #970747;
-    background-color:#fff;
+  /* margin-bottom: 25px; */
+  color: #970747;
+  font-size: 25px;
+  font-weight: bold;
 
-  }
-  
-  /* Optionally add hover styles for better UI */
-  #view-all-btn:hover {
-    background-color:#790c3b;
-    color: #fff;
-    
-  }
-  
-  .footer {
-    background-color:  #770536; /* Dark background color */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 20px 10px; /* Spacing around the footer content */
-    font-size: 14px;
-    margin-top: 1550px;
-    flex-shrink:0;
-  }
-  
-  .footer-container {
-    max-width: 1200px;
-    min-height:200px ;
-    margin: 0 auto; /* Center the content */
-  }
-  
-  .footer-links {
-    list-style: none; /* Remove default list styling */
-    padding: 0;
-    margin: 10px 0 0; /* Add some margin above the links */
-    display: flex;
-    justify-content: center; /* Center the links horizontally */
-    gap: 15px; /* Space between links */
-  }
-  
-  .footer-links li {
-    display: inline;
-  }
-  
-  .footer-links a {
-    color: #fff; /* White text for links */
-    text-decoration: none; /* Remove underline */
-    font-size: 14px;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline; /* Add underline on hover */
-    color: #ff9800; /* Optional hover color */
-  }
-  
-  /* @media screen and (max-width: 992px) {
+}
+
+#view-all-btn {
+  /* margin-top: 20px; */
+  /* cursor: pointer; */
+  border-color: #970747;
+  background-color: #fff;
+
+}
+
+/* Optionally add hover styles for better UI */
+#view-all-btn:hover {
+  background-color: #790c3b;
+  color: #fff;
+
+}
+
+.footer {
+  background-color: #770536;
+  /* Dark background color */
+  color: #fff;
+  /* White text */
+  text-align: center;
+  padding: 20px 10px;
+  /* Spacing around the footer content */
+  font-size: 14px;
+  margin-top: 1550px;
+  /* margin-top:auto; */
+  flex-shrink: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  min-height: 200px;
+  margin: 0 auto;
+  /* Center the content */
+}
+
+.footer-links {
+  list-style: none;
+  /* Remove default list styling */
+  padding: 0;
+  margin: 10px 0 0;
+  /* Add some margin above the links */
+  display: flex;
+  justify-content: center;
+  /* Center the links horizontally */
+  gap: 15px;
+  /* Space between links */
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #fff;
+  /* White text for links */
+  text-decoration: none;
+  /* Remove underline */
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  /* Add underline on hover */
+  color: #ff9800;
+  /* Optional hover color */
+}
+
+/* @media screen and (max-width: 992px) {
     .footer {
       margin-top: 1602px;
       font-size: 11px;
@@ -251,4 +276,35 @@ body,main {
     }
   }
    */
-   
+ 
+.card-img-top {
+  max-width: 80%;
+  height: 230PX;
+  border-radius: 5px;
+  padding-top:30px;
+  /* padding-bottom: 10px; */
+  padding-left: 10px !important ;
+  padding-right:10px ;
+  }
+  .card-body {
+    margin-top:20px;
+  }
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    /* margin-bottom: 5px; */
+    }
+  .card-text {
+    font-size: 0.9rem;
+    color: #555;
+   /* margin-bottom: 10px; */
+    }
+  .btn-cart {
+   /* padding: 8px 12px; */
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:#770536;
+    color: #f9f9f9;
+    }
+    
