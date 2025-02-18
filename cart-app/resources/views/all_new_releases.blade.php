@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+    <!-- <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}"> -->
     <link rel="stylesheet" href="{{asset('assets/css/stylenew.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/stylesallreleases.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/styleslider.css')}}">
@@ -34,7 +34,7 @@
   </div>
 </div>
  <!--  -->
-           <nav class="navbar navbar-expand-lg navbar-light pt-10">
+          <nav class="navbar navbar-expand-lg navbar-light pt-10">
              <div class="container-fluid" >
               <h1 class="logom d-md-block d-lg-none">H&H Books</h1>
              <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="" 
@@ -121,8 +121,9 @@
         </nav> 
      </header>   
      <!-- slider -->
-<div class="slideshow-container border slider-spacing">
-<div class="mySlides fade">
+<div class="container">
+   <div class="slideshow-container border slider-spacing">
+     <div class="mySlides fade">
         <img src= "{{asset('images/banner-1.jpg')}}"  style="width:100%" height="100%" alt="1">
       </div>
 
@@ -139,6 +140,7 @@
         <span class="dot"></span> 
         <span class="dot"></span> 
       </div>
+</div>
    <div class="content mt-4">
     <h3 class="new">New Releases</h3>
         <div class="row">
@@ -178,6 +180,46 @@
                     <div class="card-body">
                         <h5 class="card-title">Product 1</h5>
                         <p class="card-text">Description for Product 1.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">Description for Product 2.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">Description for Product 2.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">Description for Product 2.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases " alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">Description for Product 2.</p>
                         <button class="btn btn-cart">Add to Cart</button>
                     </div>
                 </div>
@@ -332,6 +374,57 @@
                     </div>
                 </div>
             </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <p class="card-text">Description for Product 5.</p>
+                        <button class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
              <div class="column">
                 <div class="card">
                     <img src="{{asset('images/output-4.jpg') }}" class="card-img-top-new-releases" alt="Product 9">
@@ -364,11 +457,24 @@
             </div>
       <!-- row -->
       </div>
+      <nav class="pagination-container">
+            <ul class="pagination">
+                <li class="page-item disabled" id="prev-btn"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item" id="next-btn"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
  <!-- content -->
- </div>
-    <!-- slider contaimer end -->
+ <!-- </div> -->
+ 
+<!-- slideshow contaimer end -->
 </div>    
-<!-- slider end -->
+<!-- container main end -->
+</div>
  <footer class="footer-allnew">
     <div class="footer-container">
         <p>&copy; 2024 My Website. All Rights Reserved.</p>
@@ -382,6 +488,70 @@
   </footer>
 </body>
  </main>
+ <!-- <script>
+        let currentPage = 1;
+        const totalPages = 4; // Change this if you have more pages
+
+        function changePage(page) {
+            if (page < 1 || page > totalPages) return;
+
+            currentPage = page;
+            updatePagination();
+        }
+
+        function updatePagination() {
+            const pageItems = document.querySelectorAll('.page-item');
+            
+            pageItems.forEach((item, index) => {
+                if (index > 0 && index <= totalPages) {
+                    item.classList.remove('active');
+                }
+            });
+
+            if (currentPage >= 1 && currentPage <= totalPages) {
+                pageItems[currentPage].classList.add('active');
+            }
+
+            document.getElementById("prev-btn").classList.toggle("disabled", currentPage === 1);
+            document.getElementById("next-btn").classList.toggle("disabled", currentPage === totalPages);
+        }
+
+        updatePagination();
+    </script> -->
+    <script>
+        let currentPage = 1;
+        const totalPages = 5;
+        const content = document.getElementById('content');
+        const pageItems = document.querySelectorAll('.page-item');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        function updateContent() {
+            content.textContent = `Page ${currentPage} Content`;
+        }
+
+        function updatePagination() {
+            pageItems.forEach(item => item.classList.remove('active'));
+            pageItems[currentPage].classList.add('active');
+            prevBtn.classList.toggle('disabled', currentPage === 1);
+            nextBtn.classList.toggle('disabled', currentPage === totalPages);
+        }
+
+        document.querySelectorAll('.page-item a').forEach((link, index) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (index === 0 && currentPage > 1) {
+                    currentPage--;
+                } else if (index === totalPages + 1 && currentPage < totalPages) {
+                    currentPage++;
+                } else if (index > 0 && index <= totalPages) {
+                    currentPage = index;
+                }
+                updateContent();
+                updatePagination();
+            });
+        });
+    </script>
 <script>
 function openNav() 
 {

@@ -153,7 +153,7 @@
     .new {
         font-size: 17px;
     }
-    footer {
+    .footer {
         padding: 10px 5px; /* Minimal padding for very small screens */
     }
 
@@ -181,7 +181,7 @@
         flex: 0 0 100%; /* Single card per row */
         height: auto;
     }
-    footer {
+   .footer {
         padding: 10px 5px; /* Minimal padding for very small screens */
     }
 
@@ -192,6 +192,9 @@
 
     .footer-links a {
         font-size: 12px; /* Smaller font for footer links */
+    }
+    .logom{
+        font-size:19px;
     }
 }
 
@@ -304,6 +307,7 @@
             </div> 
         </nav> 
      </header>   
+     <div class="main-container">
      <!-- slider -->
   <div class="slideshow-container border slider-spacing">
       <div class="mySlides fade">
@@ -323,6 +327,7 @@
         <span class="dot"></span> 
         <span class="dot"></span> 
       </div>
+</div>
     <div class="container mt-4">
             <div class="row">
               <div class="col-6 mb-4 text-left new">New Releases</div>
@@ -743,9 +748,10 @@
             </div>
              <!-- conatiner ends here  -->     
     </div>
-      <!-- slider end -->
-</div> 
-
+      <!-- slideshow-container end -->
+<!-- </div>  -->
+ <!-- main-container ends  -->
+</div>
 <footer class="footer">
     <div class="footer-container">
         <p>&copy; 2024 My Website. All Rights Reserved.</p>
