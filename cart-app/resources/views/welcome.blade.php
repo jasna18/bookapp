@@ -171,6 +171,9 @@
     .new {
         font-size: 15px;
     }
+    .logom{
+        font-size:19px;
+    }
 }
 
 @media screen and (max-width: 240px) {
